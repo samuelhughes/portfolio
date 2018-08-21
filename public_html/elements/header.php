@@ -10,7 +10,7 @@
     <div class="header-banner">
         <div class="header-banner-bg paraxify" style="background-image:url(img/header.jpg);"></div>
         <div class="banner-content">
-            <h1>Hi.  My name is Sam.  I'm a <span class="teal mobile-new-line">Professional</span> Web Developer</h1>
+            <h1>Hi.  My name is Sam.  <span class="mobile-new-line">I'm <span class="teal header-adjectives">a Professional</span></span> Web Developer</h1>
         </div>
     </div>
 </header>

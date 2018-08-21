@@ -28,6 +28,19 @@ $(document).ready(function() {
         }
     }
 
+    var adjectives = ['a Dedicated', 'a Skilled', 'a Curious', 'an Effective', 'an Experienced', 'a Professional'];
+    var counter = 0;
+
+    var loop = setInterval(function(){
+        $('header .header-adjectives').fadeOut(function(){
+            $('header .header-adjectives').text(adjectives[counter]);
+        }).fadeIn();
+        if (counter + 2 === adjectives.length){
+            clearInterval(loop);
+        }
+        counter ++;
+    }, 2000);
+
     $(window).on('scroll',function() {
         headerScroll();
     })

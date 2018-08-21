@@ -8,7 +8,7 @@
     <hr />
     <h2 class="centered">Google's Geocoding API</h2>
     <div class="description centered">
-        Simple use of Google's Geocoding API.  Click the button below to show your location details.
+        Simple use demonstration of Google's Geocoding API.  Click the button below to show your location details.
     </div>
     <div id="address-details" class="centered padding-top">
         <div class="details-container"></div>
@@ -48,6 +48,7 @@
                 });
 
             } else {
+                // TODO: Add error handling in case of location not available
                 /* geolocation IS NOT available */
                 $this.removeClass('disabled');
             }
