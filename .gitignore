@@ -1,0 +1,24 @@
+# system files
+.DS_Store
+thumbs.db
+__MACOSX
+._*
+
+# vim swap files
+*.swp
+*.swo
+
+# PHPStorm project files
+/.idea/
+
+# local vagrant directory
+/.vagrant/
+
+# temp directory
+/tmp/
+
+# npm files
+/node_modules
+npm-debug.log
+config.php
+.htaccess

@@ -1,0 +1,300 @@
+// Variables
+$teal: #60a5b1;
+$roboto:'Roboto', sans-serif;;
+$oswald:'Oswald', sans-serif;;
+
+
+// Styles
+.teal {
+  color:$teal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family:$oswald;
+}
+
+body {
+  font-family:$roboto;
+  font-size:16px;
+}
+
+
+header {
+  .header-content {
+    display: table;
+    width: 100%;
+    background-color: rgba(255,255,255,.4);
+    padding: 0 1em;
+    position:fixed;
+    z-index:1;
+    transition:background-color .4s ease, border .4s ease;
+    border-bottom: 1px solid rgba(0,0,0,0);
+
+    .logo img {
+      width:12em;
+      transition:width .4s ease;
+    }
+
+    .half {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+      padding: 1em;
+      text-align:right;
+
+      &:first-child {
+        text-align:left;
+      }
+    }
+
+    &.scrolling {
+      background-color:#fff;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+  }
+
+  .header-banner {
+    height: 90vh;
+    position:relative;
+
+    .header-banner-bg {
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      height: 100%;
+    }
+
+
+    .banner-content {
+      color:#000;
+      position:absolute;
+      top:50%;
+      width:100%;
+      text-align:center;
+      transform:translateY(-50%);
+    }
+  }
+}
+
+a {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition:.4s color ease;
+
+  &:hover {
+    color:$teal;
+    text-decoration:none;
+    cursor:pointer;
+  }
+}
+
+.clear {
+  clear:both;
+}
+
+.new-line {
+  display:block;
+}
+
+img {
+  max-width:100%;
+}
+
+
+.center {
+  width: 80%;
+  margin: 0 auto 5rem;
+
+  .bio {
+    padding:1em 0;
+  }
+
+  .accordion {
+    padding: 1em 0 1em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+
+    .title {
+      position:relative;
+      transition: color .4s ease;
+      margin:0;
+
+      &:hover {
+        cursor:pointer;
+        color:$teal;
+      }
+
+      .fa {
+        position: absolute;
+        right:0;
+        font-size: 16px;
+        top: 8px;
+        transition: transform .4s ease, color .2s ease;
+      }
+    }
+
+    .content {
+      display:none;
+      padding: .5em 0;
+    }
+
+    &[data-status="active"] {
+      .title {
+        color:$teal;
+      }
+
+      .fa {
+        transform: rotate(45deg);
+        color:$teal;
+      }
+
+    }
+  }
+
+  hr {
+    border: 1px solid #eee !important;
+  }
+
+  .meter {
+    width:100%;
+    border: 1px solid rgba(0,0,0,.3);
+    position: relative;
+    height: 2em;
+    border-radius: 5px;
+
+    .from, .to {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .from {
+      left:5px;
+      color:#fff;
+    }
+
+    .to {
+      right:5px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      background-color: $teal;
+    }
+
+    &.meter-30 {
+      &:after {
+        width:30%;
+      }
+    }
+
+    &.meter-40 {
+      &:after {
+        width:40%;
+      }
+    }
+
+    &.meter-50 {
+      &:after {
+        width:50%;
+      }
+    }
+
+    &.meter-60 {
+      &:after {
+        width:60%;
+      }
+    }
+
+    &.meter-70 {
+      &:after {
+        width:70%;
+      }
+    }
+
+    &.meter-80 {
+      &:after {
+        width:80%;
+      }
+    }
+
+    &.meter-90 {
+      &:after {
+        width:90%;
+      }
+    }
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+button.call-to-action {
+  border: none;
+  background-color: $teal;
+  padding: 1rem 4rem;
+  color: #fff;
+  letter-spacing: 1px;
+  transition:background-color .4s ease, opacity .4s ease;
+  margin: 2rem 0;
+
+  &.disabled {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color:teal;
+  }
+}
+
+.centered {
+  text-align:center;
+}
+
+.padding-top {
+  padding-top:3rem;
+}
+
+.loading {
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-image:url(../../../img/loading.gif);
+  display:none;
+}
+
+.button-container {
+  position:relative;
+}
+
+
+// Responsive
+
+@media(max-width:650px) {
+  header {
+    .header-content {
+      .logo img {
+        width:100%;
+      }
+
+      &.scrolling {
+        .logo img {
+          width:100%;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:400px) {
+
+}
